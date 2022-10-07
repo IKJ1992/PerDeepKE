@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PerDeepKE"
+version = "0.0.1"
+authors = [
+  { name="Iman Khani Jazani", email="imankhanijazani@gmail.com" },
+]
+description = "Easy-to-Use Persian Keyword Extraction with Deep Learning"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Home page" = "https://github.com/IKJ1992/PerDeepKE"
+"Bug Tracker" = "https://github.com/IKJ1992/PerDeepKE/issues"
