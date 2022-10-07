@@ -15,7 +15,6 @@ Installation can be done using [pypi](https://pypi.org/project/PerDeepKE/):
 pip install perdeepke
 ```
 
-
 ## Usage
 Here is an example of how PerDeepKE can be used:
 ```python
@@ -31,6 +30,7 @@ for word, score in ke.top_words(num=10):
 ## Related Github Repo
 - https://github.com/AlirezaTheH/perke
 - https://github.com/edoost/perkey
+
 ## TODO
  - add stop-words removing functionality
  - >coming soon
