@@ -30,5 +30,5 @@ for word, score in ke.top_words(num=10):
 ```
 
 ## TODO
-> add stop-words removing functionality
-> coming soon
+ - > add stop-words removing functionality
+ - > coming soon
