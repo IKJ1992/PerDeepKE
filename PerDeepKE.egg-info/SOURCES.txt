@@ -1,7 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-PerDeepKE.egg-info/PKG-INFO
-PerDeepKE.egg-info/SOURCES.txt
-PerDeepKE.egg-info/dependency_links.txt
-PerDeepKE.egg-info/top_level.txt
