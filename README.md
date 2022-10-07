@@ -9,6 +9,7 @@
 PerDeepKE is a minimal, easy-to-use, and self-supervised Persian keyword extractor library with deep learning techniques such as transformer-based embeddings to retrieve keywords most similar to your input document.
 
 ## Installation
+If you haven't installed [requirements], please do so.(https://github.com/IKJ1992/PerDeepKE/blob/master/src/PerDeepKE/requirements.txt).
 Installation can be done using [pypi](https://pypi.org/project/PerDeepKE/):
 
 ```
