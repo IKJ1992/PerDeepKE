@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/PerDeepKE/__init__.py
+src/PerDeepKE/embedding.py
+src/PerDeepKE/keyword_extraction.py
+src/PerDeepKE/text_segmentation.py
+src/PerDeepKE.egg-info/PKG-INFO
+src/PerDeepKE.egg-info/SOURCES.txt
+src/PerDeepKE.egg-info/dependency_links.txt
+src/PerDeepKE.egg-info/top_level.txt
