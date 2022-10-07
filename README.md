@@ -28,7 +28,9 @@ ke = Keyword_Extraction(text, segment_num=2)
 for word, score in ke.top_words(num=10):
         print(word, score)
 ```
-
+## Related Github Repo
+- https://github.com/AlirezaTheH/perke
+- https://github.com/edoost/perkey
 ## TODO
  - add stop-words removing functionality
  - >coming soon
