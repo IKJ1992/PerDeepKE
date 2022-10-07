@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-import json
 from parsivar import Normalizer, Tokenizer
-from text_segmentation import segmentor
-from embedding import Embedding
+from .embedding import Embedding
+from .text_segmentation import segmentor
 import numpy as np
 
 class Keyword_Extraction():
-    def __init__(self, text, segment_num= 3, remove_stop_words= False):
+    def __init__(self, text, segment_num= 3):
 
         print('Our models are loading...')
         self.normalizer = Normalizer()
@@ -15,7 +14,6 @@ class Keyword_Extraction():
         self.embeder = Embedding()
 
         self.text = text
-        self.remove_sw = remove_stop_words
         self.segment_num = segment_num
 
         self.tokens, self.text = self._preprocess()
@@ -29,16 +27,7 @@ class Keyword_Extraction():
         print('Your text is processing now!')
         normal_text = self.normalizer.normalize(self.text)
         tokens = self.tokenizer.tokenize_words(self.normalizer.normalize(self.text))
-        if self.remove_sw:
-            print('Stop-words are removing...')
-            with open('stop_words.txt', mode="r", encoding="utf-8") as f:
-                stop_words = [ sw.strip() for sw in f.readlines()]
-            removed_sw_tokens = [] 
-            for word in tokens: 
-                if word not in stop_words:
-                    removed_sw_tokens.append(word)
 
-            return removed_sw_tokens, ' '.join(removed_sw_tokens)            
         return tokens, normal_text
 
     def _embedding(self, texts):
@@ -106,4 +95,11 @@ class Keyword_Extraction():
 
         return sorted_word_score[:num+1]
 
-    
+
+if __name__=='__main__':
+
+    text = "بر اساس تحلیل نقشه‌های همدیدی و آینده‌نگری سازمان هواشناسی امروز در استان‌های ساحلی دریای خزر، اردبیل، شمال آذربایجان شرقی و ارتفاعات البرز مرکزی بارش باران، همراه با وزش باد شدید موقتی و کاهش نسبی دما پیش‌بینی شده است. فردا از میزان بارش‌های این مناطق کاسته شده و فقط در سواحل شمالی بارش پراکنده روی می‌دهد."
+    ke = Keyword_Extraction(text, segment_num=2)
+
+    for word, _ in ke.top_words(num=10):
+        print(word)
