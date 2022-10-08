@@ -36,7 +36,7 @@ for word, score in ke.top_words(num=10):
  - add stop-words removing functionality
  - add better pre-process steps
  - add batch and parallel processing
- - add other sentence representation 
+ - add other sentence representations
  - > coming soon
 
 ## Contributing
