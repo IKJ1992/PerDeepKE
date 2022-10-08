@@ -2,7 +2,7 @@
 [![PyPI - License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MaartenGr/keybert/blob/master/LICENSE)
 [![PyPI - PyPi](https://img.shields.io/pypi/v/PerDeepKE)](https://pypi.org/project/PerDeepKE/)
 
-<img src="images/logo.png" width="35%" height="35%" align="right" />
+<img src="https://github.com/IKJ1992/PerDeepKE/blob/master/images/logo.png" width="35%" height="35%" align="right" />
 
 # PerDeepKE
 
