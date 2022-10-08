@@ -34,7 +34,10 @@ for word, score in ke.top_words(num=10):
 
 ## TODO
  - add stop-words removing functionality
- - >coming soon
+ - add better pre-process steps
+ - add batch and parallel processing
+ - add other sentence representation 
+ - > coming soon
 
 ## Contributing
 >coming soon
