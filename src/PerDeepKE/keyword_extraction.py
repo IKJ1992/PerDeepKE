@@ -8,7 +8,7 @@ import numpy as np
 class Keyword_Extraction():
     def __init__(self, text, segment_num= 3):
 
-        print('Our models are loading...')
+        print('='*30 + '\nOur models are loading...\n')
         self.normalizer = Normalizer()
         self.tokenizer = Tokenizer()
         self.embeder = Embedding()
@@ -24,7 +24,7 @@ class Keyword_Extraction():
 
     def _preprocess(self):
 
-        print('Your text is processing now!')
+        print('='*30 + '\nYour text is processing now!\n')
         normal_text = self.normalizer.normalize(self.text)
         tokens = self.tokenizer.tokenize_words(self.normalizer.normalize(self.text))
 
@@ -81,7 +81,7 @@ class Keyword_Extraction():
 
     def top_words(self, num=5):
         
-        print('TOP-words are finding...')
+        print('='*30 + '\nTOP-words are finding...\n')
 
         semantic_word_score = self.semantic_score()
         count_word_score = self.count_score()
