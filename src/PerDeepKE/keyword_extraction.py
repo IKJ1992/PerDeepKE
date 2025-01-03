@@ -4,7 +4,7 @@ from parsivar import Normalizer, Tokenizer
 from .embedding import Embedding
 from .text_segmentation import segmentor
 import numpy as np
-
+import Levenshtein
 class Keyword_Extraction():
     def __init__(self, text, segment_num= 3):
 
@@ -78,7 +78,12 @@ class Keyword_Extraction():
             score.append(tf/idf)
         
         return dict(zip(self.word_type, score))
-
+    def filter_similar_words(self, words, threshold=5):
+          filtered_words = []
+          for word in words:
+            if all(Levenshtein.distance(word, w) > threshold for w in filtered_words):
+              filtered_words.append(word)
+          return filtered_words
     def top_words(self, num=5):
         
         print('='*30 + '\nTOP-words are finding...\n')
@@ -92,8 +97,12 @@ class Keyword_Extraction():
             final_word_score[word] = semantic_word_score [word] * count_word_score[word]
         
         sorted_word_score = sorted(final_word_score.items(), key=lambda y: y[1], reverse=True)
+        top_words = [word for word, _ in sorted_word_score[:num+1]]
 
-        return sorted_word_score[:num+1]
+        # Filter similar words
+        top_words = self.filter_similar_words(top_words)
+
+        return top_words
 
 
 if __name__=='__main__':
